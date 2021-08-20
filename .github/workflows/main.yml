@@ -1,4 +1,4 @@
-name: CI
+name: Generate PDF and maybe send email
 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -9,17 +9,15 @@ jobs:
   deployAndInvokeSCF:
     runs-on: ubuntu-latest
     env:
-      SERVERLESS_PLATFORM_VENDOR: tencent
-      TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
-      TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
-      REGION: ap-shanghai
-      REDIS_HOST: ${{ secrets.REDIS_HOST_DEV }}
-      REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD_DEV }}
-      REDIS_PORT: ${{ secrets.REDIS_PORT_DEV }}
+      SHEET_ID: ${{ secrets.SHEET_ID }}
+      GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+      GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - name: Run script
-        run: node index.js
+      - name: run index.js
+        run: |
+          npm i
+          node index.js
