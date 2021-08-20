@@ -19,7 +19,7 @@ Goal
 1. Fork this repo
 2. Add 3 secrets to your repo `SHEET_ID`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY`
 
-A script will be ran every month and update the google sheet
+A script will be ran every month and update the google sheet. So that you can export the PDF by one click (https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=pdf )
 
 ## Note
 
