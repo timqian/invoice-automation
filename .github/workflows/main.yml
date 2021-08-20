@@ -21,3 +21,24 @@ jobs:
         run: |
           npm i
           node index.js
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Required mail server address:
+          server_address: smtp.gmail.com
+          # Required mail server port:
+          server_port: 465
+          # Optional (recommended): mail server username:
+          username: ${{secrets.MAIL_USERNAME}}
+          # Optional (recommended) mail server password:
+          password: ${{secrets.MAIL_PASSWORD}}
+          # Required mail subject:
+          subject: Monthly invoice
+          # Required recipients' addresses:
+          to: tim.qian@serverless.com
+          # Required sender full name (address can be skipped):
+          from: Github action # <user@example.com>
+          # Optional whether this connection use TLS (default is true if server_port is 465)
+          secure: true
+          # Optional plain body:
+          body: Download the PDF here: https://docs.google.com/spreadsheets/d/1gFVeCV0C4UPkOrpZP7ZB5g0M42ddGYyZqwn3MI48h7E/export?format=pdf

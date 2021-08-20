@@ -35,10 +35,11 @@ async function updateSheet() {
 	// await newSheet.delete();
 
   // Download PDF
-  await axios.get(
-    `https://docs.google.com/spreadsheets/d/${process.env.SHEET_ID}/export?format=pdf&gid=0&id=${process.env.SHEET_ID}&output=pdf`,
 
-  )
+  // const downloadURL = 'https://docs.google.com/spreadsheets/d/1gFVeCV0C4UPkOrpZP7ZB5g0M42ddGYyZqwn3MI48h7E/export?format=pdf';
+
+  // TODO send this email to me
+
 }
 
 updateSheet()
