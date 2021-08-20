@@ -19,7 +19,12 @@ async function updateSheet() {
 	// await doc.updateProperties({ title: 'renamed doc' });
 	
 	const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
-	console.log(sheet.title);
+	console.log('Editing sheet:', sheet.title);
+
+  const cellInvoiceNo = sheet.getCellByA1('F10');
+  cellInvoiceNo.value = '2021-08-TQ';
+  await sheet.saveUpdatedCells();
+  console.log(cellInvoiceNo.value);
 	// console.log(sheet.rowCount);
 	
 	// // adding / removing sheets
