@@ -1,0 +1,24 @@
+{
+  "name": "invoice-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timqian/invoice-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timqian/invoice-automation/issues"
+  },
+  "homepage": "https://github.com/timqian/invoice-automation#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "google-spreadsheet": "^3.1.15"
+  }
+}
