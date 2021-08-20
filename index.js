@@ -15,11 +15,11 @@ async function updateSheet() {
 	});
 
 	await doc.loadInfo(); // loads document properties and worksheets
-	// console.log(doc);
+	console.log(doc);
 	// await doc.updateProperties({ title: 'renamed doc' });
 
 	const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
-	console.log('Editing sheet:', sheet.title);
+	console.log('Editing sheet:', sheet);
 
   await sheet.loadCells('A1:F27');
 	const cellInvoiceNo = sheet.getCellByA1('F10');
@@ -31,6 +31,8 @@ async function updateSheet() {
 	// // adding / removing sheets
 	// const newSheet = await doc.addSheet({ title: 'hot new sheet!' });
 	// await newSheet.delete();
+
+  // Download PDF
 }
 
 updateSheet()
