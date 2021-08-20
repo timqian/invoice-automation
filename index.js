@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+const { default: axios } = require('axios');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 
@@ -15,13 +16,14 @@ async function updateSheet() {
 	});
 
 	await doc.loadInfo(); // loads document properties and worksheets
-	console.log(doc);
+	// console.log(doc);
 	// await doc.updateProperties({ title: 'renamed doc' });
 
 	const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
-	console.log('Editing sheet:', sheet);
+	console.log('Editing sheet:', sheet.title);
 
-  await sheet.loadCells('A1:F27');
+  const allCells = await sheet.loadCells();
+  console.log(allCells);
 	const cellInvoiceNo = sheet.getCellByA1('F10');
 	cellInvoiceNo.value = '2021-08-TQ';
 	await sheet.saveUpdatedCells();
@@ -33,6 +35,10 @@ async function updateSheet() {
 	// await newSheet.delete();
 
   // Download PDF
+  await axios.get(
+    `https://docs.google.com/spreadsheets/d/${process.env.SHEET_ID}/export?format=pdf&gid=0&id=${process.env.SHEET_ID}&output=pdf`,
+
+  )
 }
 
 updateSheet()
