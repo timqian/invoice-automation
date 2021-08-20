@@ -2,7 +2,7 @@
 
 ## Why
 
-I have to edit a googlesheet every month, export as a PDF and then send it to Kristin every month. This process cost around 3 mins every month. So I decided to spend 3 hours to automate it. And maybe other people in the company will find it useful too.
+I have to edit a googlesheet every month, export as a PDF and then send it to Kristin every month. This process cost around 3 minutes every month. So I decided to spend some time to automate it. And maybe other people in the company will find it useful too.
 
 ## What does this repo do
 
