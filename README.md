@@ -1,5 +1,8 @@
 # invoice-automation
 
+- Update Google sheet about invoice
+- Download a PDF version of it
+- Send it to Kristin
 ## What does this repo do
 
 - A nodejs script to update google sheet and download a PDF version

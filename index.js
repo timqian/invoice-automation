@@ -14,7 +14,7 @@ async function updateSheet() {
 	  private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
 	});
 	
-	// await doc.loadInfo(); // loads document properties and worksheets
+	await doc.loadInfo(); // loads document properties and worksheets
 	// console.log(doc);
 	// await doc.updateProperties({ title: 'renamed doc' });
 	
