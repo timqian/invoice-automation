@@ -21,6 +21,7 @@ async function updateSheet() {
 	const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
 	console.log('Editing sheet:', sheet.title);
 
+  await sheet.loadCells('A1:F27');
 	const cellInvoiceNo = sheet.getCellByA1('F10');
 	cellInvoiceNo.value = '2021-08-TQ';
 	await sheet.saveUpdatedCells();
