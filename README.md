@@ -1,4 +1,4 @@
-# invoice-automation
+# Invoice-automation
 
 ## Why
 
@@ -6,22 +6,20 @@ I have to edit a googlesheet every month, export as a PDF and then send it to Kr
 
 ## What does this repo do
 
+Currently
+- A script will update the googlesheet every month. So you can download the latest invoice PDF in one click when you need it.
+
+
+Goal
 - A nodejs script will update google sheet and download a PDF version
 - A GitHub action workflow used to run the script and then email this PDF to Kristin
 
 ## How to use this project
 
 1. Fork this repo
-2. Add 3 secrets to your repo
-  - SHEET_ID
-  - GOOGLE_SERVICE_ACCOUNT_EMAIL
-  - GOOGLE_PRIVATE_KEY
-3. Run the workflow
+2. Add 3 secrets to your repo `SHEET_ID`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY`
 
-## Shortcuts
-
-- [Update sheet ID, Google auth](https://github.com/timqian/invoice-automation/settings/secrets/actions)
-- [Run the workflow](https://github.com/timqian/invoice-automation/actions/workflows/main.yml)
+A script will be ran every month and update the google sheet
 
 ## Note
 

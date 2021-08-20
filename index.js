@@ -31,16 +31,10 @@ async function updateSheet() {
   const DateCell = sheet.getCellByA1('F11');
   DateCell.value = today;
 	await sheet.saveUpdatedCells();
-	// console.log(cellInvoiceNo.value);
-	// console.log(sheet.rowCount);
-
-	// // adding / removing sheets
-	// const newSheet = await doc.addSheet({ title: 'hot new sheet!' });
-	// await newSheet.delete();
 
   // Download PDF
 
-  // const downloadURL = 'https://docs.google.com/spreadsheets/d/1gFVeCV0C4UPkOrpZP7ZB5g0M42ddGYyZqwn3MI48h7E/export?format=pdf';
+  // const downloadURL = 'https://docs.google.com/spreadsheets/d/{sheetId}/export?format=pdf';
 
   // TODO send this email to me
 
