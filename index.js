@@ -23,7 +23,7 @@ async function updateSheet() {
 	console.log('Editing sheet:', sheet.title);
 
   const allCells = await sheet.loadCells();
-  console.log(allCells);
+  console.log(allCells, sheet);
 	const cellInvoiceNo = sheet.getCellByA1('F10');
 	cellInvoiceNo.value = '2021-08-TQ';
 	await sheet.saveUpdatedCells();
