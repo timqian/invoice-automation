@@ -14,12 +14,12 @@ async function updateSheet() {
 	  private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
 	});
 	
-	await doc.loadInfo(); // loads document properties and worksheets
-	console.log(doc);
+	// await doc.loadInfo(); // loads document properties and worksheets
+	// console.log(doc);
 	// await doc.updateProperties({ title: 'renamed doc' });
 	
-	// const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
-	// console.log(sheet.title);
+	const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
+	console.log(sheet.title);
 	// console.log(sheet.rowCount);
 	
 	// // adding / removing sheets
