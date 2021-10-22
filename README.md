@@ -23,7 +23,7 @@ A script will be ran every month and update the google sheet. So that you can ex
 
 ## Note
 
-You may need to share the google sheet with the email address of your service account ex: thomasapp@appname-201813.iam.gserviceaccount.com 
+You may need to share the google sheet with the email address of your `google service account` e.g. thomasapp@appname-201813.iam.gserviceaccount.com 
 Otherwise you will see a [403] error from google
 
 ref: https://stackoverflow.com/a/49965912/4674834
